@@ -6,6 +6,8 @@ import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -40,6 +42,33 @@ public class UploadActivity extends AppCompatActivity {
 
         auth = FirebaseAuth.getInstance();
         firestore = FirebaseFirestore.getInstance();
+
+
+        binding.tagTextField.addTextChangedListener(new TextWatcher() {
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                // do stuff here.
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                // This method is called when the text is being changed
+
+                // Check if the new text contains any whitespace characters
+                if (s.toString().contains(" ")) {
+                    String filteredText = s.toString().replace(" ", ""); // Remove whitespace characters
+                    binding.tagTextField.setText(filteredText); // Update the text in the EditText
+                    binding.tagTextField.setSelection(filteredText.length()); // Set the cursor position at the end
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                // do stuff here too.
+            }
+        });
+
     }
 
     public void setStatusBarColor() {

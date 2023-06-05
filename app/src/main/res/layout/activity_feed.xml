@@ -21,7 +21,9 @@
         app:layout_constraintTop_toTopOf="parent"
         app:title="Your Feed"
         app:titleTextColor="@color/white"
-        app:titleTextAppearance="@style/ToolbarTitleStyle"/>
+        app:titleTextAppearance="@style/ToolbarTitleStyle"
+        app:subtitle="You are logged in as:"
+        app:subtitleTextColor="#61FFFFFF"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
@@ -43,7 +45,7 @@
         android:ems="10"
         android:inputType="text"
         android:text=""
-        android:hint="Enter a tag"
+        android:hint="Enter a tag to search links!"
         android:textColor="@color/white"
         android:textColorHint="#7AFFFFFF"
         android:fontFamily="@font/ariel_round"
