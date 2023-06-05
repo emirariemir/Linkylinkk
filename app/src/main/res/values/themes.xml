@@ -3,7 +3,13 @@
     <style name="Base.Theme.Linkylinkk" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="actionOverflowButtonStyle">@style/Threedotcolor</item>
     </style>
 
     <style name="Theme.Linkylinkk" parent="Base.Theme.Linkylinkk" />
+
+    <style name="Threedotcolor" parent="Widget.AppCompat.Light.ActionButton.Overflow">
+        <item name="tint">#FFFFFF</item>
+    </style>
+
 </resources>
