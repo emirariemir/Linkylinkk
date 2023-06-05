@@ -54,7 +54,7 @@
         android:layout_height="75dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="8dp"
         android:backgroundTint="@color/white"
         android:fontFamily="@font/ariel_round"
         android:onClick="signUpPressed"
@@ -107,7 +107,7 @@
         android:text="Let's get you ready!"
         android:fontFamily="@font/ariel_round"
         android:textColor="@color/white"
-        android:textSize="14sp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />

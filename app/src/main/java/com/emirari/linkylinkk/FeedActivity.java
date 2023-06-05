@@ -29,7 +29,9 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import java.security.Timestamp;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Map;
 
 public class FeedActivity extends AppCompatActivity {
@@ -132,7 +134,8 @@ public class FeedActivity extends AppCompatActivity {
                         String title = (String) post.get("title");
                         String link = (String) post.get("link");
                         String tag = (String) post.get("tag");
-                        Post postObject = new Post(userMail, title, link, tag);
+                        String strTime = (String) post.get("strDate");
+                        Post postObject = new Post(userMail, title, link, tag, strTime);
                         posts.add(postObject);
                         allPosts.add(postObject);
                     }

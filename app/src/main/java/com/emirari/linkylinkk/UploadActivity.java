@@ -22,6 +22,9 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 
 public class UploadActivity extends AppCompatActivity {
@@ -99,6 +102,10 @@ public class UploadActivity extends AppCompatActivity {
         postMap.put("link", link);
         postMap.put("tag", tag);
         postMap.put("date", FieldValue.serverTimestamp());
+        Date date = new Date();
+        SimpleDateFormat formatter = new SimpleDateFormat("dd-M-yyyy HH:mm:ss");
+        final String strDate = formatter.format(date);
+        postMap.put("strDate", strDate);
 
         firestore.collection("Links").add(postMap).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
             @Override

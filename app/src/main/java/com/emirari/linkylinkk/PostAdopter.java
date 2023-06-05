@@ -3,6 +3,7 @@ package com.emirari.linkylinkk;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.text.format.DateUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +14,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.emirari.linkylinkk.databinding.RecyclerRowBinding;
 
 import java.sql.Array;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.TimeZone;
 
 public class PostAdopter extends RecyclerView.Adapter<PostAdopter.PostHolder> {
 
@@ -29,6 +33,20 @@ public class PostAdopter extends RecyclerView.Adapter<PostAdopter.PostHolder> {
 
     private ArrayList<Post> postArrayList;
     private Context context;
+
+    private String calculateTimeAgo(String datePost) {
+        SimpleDateFormat sdf = new SimpleDateFormat("dd-M-yyyy HH:mm:ss");
+        sdf.setTimeZone(TimeZone.getTimeZone("Turkey"));
+        try {
+            long time = sdf.parse(datePost).getTime();
+            long now = System.currentTimeMillis();
+            CharSequence ago = DateUtils.getRelativeTimeSpanString(time, now, DateUtils.MINUTE_IN_MILLIS);
+            return ago + "";
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return "";
+    }
 
     class PostHolder extends RecyclerView.ViewHolder {
         RecyclerRowBinding recyclerRowBinding;
@@ -59,6 +77,12 @@ public class PostAdopter extends RecyclerView.Adapter<PostAdopter.PostHolder> {
                 context.startActivity(intent);
             }
         });
+        if (postArrayList.get(position).strTime != null) {
+            String timeAgo = calculateTimeAgo(postArrayList.get(position).strTime);
+            holder.recyclerRowBinding.timeTextView.setText(timeAgo);
+        } else {
+            holder.recyclerRowBinding.timeTextView.setText("Uploaded eternity ago.");
+        }
     }
 
     @Override

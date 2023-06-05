@@ -23,6 +23,18 @@
         android:textColor="#03A9F4"
         android:autoLink="web"
         android:layout_marginHorizontal="24dp"
-        android:layout_marginBottom="26dp"
+        android:layout_marginBottom="10dp"
         ></TextView>
+
+    <TextView
+        android:id="@+id/timeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Uploaded 2 minutes ago"
+        android:textSize="14sp"
+        android:fontFamily="@font/ariel_round"
+        android:textColor="@color/white"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="32dp"></TextView>
+
 </LinearLayout>
