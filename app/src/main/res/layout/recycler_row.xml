@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/recyclerUserMail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="user mail"
+        android:textSize="20sp"
+        android:fontFamily="@font/ariel_round"
+        android:layout_marginBottom="10dp"
+        android:layout_marginHorizontal="24dp"></TextView>
+
+    <TextView
+        android:id="@+id/recyclerLink"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Link Caption"
+        android:textSize="25sp"
+        android:fontFamily="@font/ariel_round"
+        android:textColor="#03A9F4"
+        android:autoLink="web"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="26dp"
+        ></TextView>
+</LinearLayout>

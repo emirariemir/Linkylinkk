@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "925909992596",
+    "project_id": "linkylinkk-d32c1",
+    "storage_bucket": "linkylinkk-d32c1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:925909992596:android:959db6d40a0957858a2081",
+        "android_client_info": {
+          "package_name": "com.emirari.linkylinkk"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZ9Awv994dSkaKctVd8CnwflBmP3atm8s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
