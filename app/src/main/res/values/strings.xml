@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">Linkylinkk</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_in">Sign In</string>
+    <string name="share_cool_links">Share cool links!</string>
+    <string name="lets_get_you_started">Let\'s get you started!</string>
+    <string name="welcome_back">Hi there, welcome back!</string>
+    <string name="enter_email">Enter your email</string>
+    <string name="enter_password">Enter your password</string>
+    <string name="cancel">Cancel</string>
+    <string name="your_feed">Your Feed</string>
+    <string name="enter_a_tag_to_search">Enter a tag to search links!</string>
+    <string name="logged_in_as">Hello,</string>
+    <string name="post_link">Post a Link!</string>
+    <string name="enter_title">Give it a title.</string>
+    <string name="enter_link">Paste your link.</string>
+    <string name="enter_tag">Give it a tag.</string>
+    <string name="publish">Publish</string>
 </resources>

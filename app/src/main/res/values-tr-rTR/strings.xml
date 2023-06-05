@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Linkylinkk</string>
+    <string name="sign_up">Üye Ol</string>
+    <string name="sign_in">Giriş Yap</string>
+    <string name="share_cool_links">Havalı linkler paylaş!</string>
+    <string name="lets_get_you_started">Hadi seni hazırlayalım!</string>
+    <string name="welcome_back">Selam, hoşgeldin!</string>
+    <string name="enter_email">Mail adresini yaz</string>
+    <string name="enter_password">Şifreni yaz</string>
+    <string name="cancel">Geri Dön</string>
+    <string name="your_feed">Keşfet</string>
+    <string name="enter_a_tag_to_search">Link aramak için bir tag gir!</string>
+    <string name="logged_in_as">Selam,</string>
+    <string name="post_link">Link Paylaş!</string>
+    <string name="enter_title">Bir başlık ver.</string>
+    <string name="enter_link">Linkini buraya yapıştır.</string>
+    <string name="enter_tag">Bir tag ver.</string>
+    <string name="publish">Paylaş</string>
+</resources>

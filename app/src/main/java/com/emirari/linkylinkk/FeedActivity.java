@@ -63,7 +63,7 @@ public class FeedActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         firestore = FirebaseFirestore.getInstance();
 
-        toolbar.setSubtitle("Hello, " + mAuth.getCurrentUser().getEmail());
+        toolbar.setSubtitle(getText(R.string.logged_in_as) + " " + mAuth.getCurrentUser().getEmail());
 
         posts = new ArrayList<Post>();
 

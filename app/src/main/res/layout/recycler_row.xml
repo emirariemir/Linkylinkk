@@ -33,7 +33,7 @@
         android:text="Uploaded 2 minutes ago"
         android:textSize="14sp"
         android:fontFamily="@font/ariel_round"
-        android:textColor="@color/white"
+        android:textColor="#7703A9F4"
         android:layout_marginHorizontal="24dp"
         android:layout_marginBottom="32dp"></TextView>
 
