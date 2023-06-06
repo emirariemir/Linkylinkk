@@ -37,6 +37,7 @@ public class UploadActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         binding = ActivityUploadBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
@@ -46,19 +47,14 @@ public class UploadActivity extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
         firestore = FirebaseFirestore.getInstance();
 
-
         binding.tagTextField.addTextChangedListener(new TextWatcher() {
-
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                // do stuff here.
+                // empty stuff here.
             }
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                // This method is called when the text is being changed
-
-                // Check if the new text contains any whitespace characters
                 if (s.toString().contains(" ")) {
                     String filteredText = s.toString().replace(" ", ""); // Remove whitespace characters
                     binding.tagTextField.setText(filteredText); // Update the text in the EditText
@@ -68,7 +64,7 @@ public class UploadActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-                // do stuff here too.
+                // empty stuff here too.
             }
         });
 
@@ -76,19 +72,13 @@ public class UploadActivity extends AppCompatActivity {
 
     public void setStatusBarColor() {
         Window window = getWindow();
-
-        // clear FLAG_TRANSLUCENT_STATUS flag:
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-
-        // add FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS flag to the window
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-
-        // finally change the color
-        window.setStatusBarColor(ContextCompat.getColor(UploadActivity.this, R.color.custom_statusbar_color));
-
+        window.setStatusBarColor(ContextCompat.getColor(UploadActivity.this, R.color.custom_statusbar_color)); // finally change the color
     }
 
     public void publishPressed(View view) {
+
         FirebaseUser user = auth.getCurrentUser();
 
         String userMail = user.getEmail();
@@ -105,7 +95,8 @@ public class UploadActivity extends AppCompatActivity {
         Date date = new Date();
         SimpleDateFormat formatter = new SimpleDateFormat("dd-M-yyyy HH:mm:ss");
         final String strDate = formatter.format(date);
-        postMap.put("strDate", strDate);
+
+        postMap.put("strDate", strDate); // Put everything here.
 
         firestore.collection("Links").add(postMap).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
             @Override

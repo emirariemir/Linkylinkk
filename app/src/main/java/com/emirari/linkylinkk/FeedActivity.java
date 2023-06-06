@@ -44,7 +44,6 @@ public class FeedActivity extends AppCompatActivity {
     private FirebaseFirestore firestore;
 
     ArrayList<Post> posts;
-
     ArrayList<Post> allPosts;
     ArrayList<Post> filteredPosts;
 
@@ -81,14 +80,8 @@ public class FeedActivity extends AppCompatActivity {
 
     public void setStatusBarColor() {
         Window window = getWindow();
-
-        // clear FLAG_TRANSLUCENT_STATUS flag:
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-
-        // add FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS flag to the window
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-
-        // finally change the color
         window.setStatusBarColor(ContextCompat.getColor(FeedActivity.this, R.color.custom_statusbar_color));
 
     }
@@ -106,7 +99,6 @@ public class FeedActivity extends AppCompatActivity {
             finish();
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -121,6 +113,7 @@ public class FeedActivity extends AppCompatActivity {
         firestore.collection("Links").orderBy("date", Query.Direction.DESCENDING).addSnapshotListener(new EventListener<QuerySnapshot>() {
             @Override
             public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
+
                 if (error != null) {
                     Toast.makeText(FeedActivity.this, error.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
                 }
@@ -142,6 +135,7 @@ public class FeedActivity extends AppCompatActivity {
                     filteredPosts.addAll(allPosts);
                     feedRecyclerAdapter.notifyDataSetChanged();
                 }
+
             }
         });
     }
@@ -158,7 +152,6 @@ public class FeedActivity extends AppCompatActivity {
         feedRecyclerAdapter.notifyDataSetChanged();
     }
 
-    // Call this method when the user performs a search
     private void performSearch(String tag) {
         if (tag.isEmpty()) {
             // If the search tag is empty, display all posts
