@@ -16,4 +16,6 @@
     <string name="enter_link">Paste your link.</string>
     <string name="enter_tag">Give it a tag.</string>
     <string name="publish">Publish</string>
+    <string name="add_link">Add Link</string>
+    <string name="sign_out">Sign Out</string>
 </resources>

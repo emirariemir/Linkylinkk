@@ -17,4 +17,6 @@
     <string name="enter_link">Linkini buraya yapıştır.</string>
     <string name="enter_tag">Bir tag ver.</string>
     <string name="publish">Paylaş</string>
+    <string name="add_link">Link Paylaş</string>
+    <string name="sign_out">Çıkış Yap</string>
 </resources>
