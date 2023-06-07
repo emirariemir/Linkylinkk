@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SignUpActivity"
-    android:background="#F45050">
+    android:background="#51BCF2">
 
     <EditText
         android:id="@+id/emailTextField"
@@ -59,8 +59,8 @@
         android:fontFamily="@font/ariel_round"
         android:onClick="signUpPressed"
         android:text="@string/sign_up"
-        android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textColor="#031D28"
+        android:textSize="22sp"
         app:layout_constraintBottom_toTopOf="@+id/cancelButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -87,7 +87,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="35dp"
-        android:backgroundTint="#132028"
+        android:backgroundTint="#031D28"
         android:fontFamily="@font/ariel_round"
         android:onClick="cancelPressed"
         android:text="@string/cancel"
