@@ -1,4 +1,5 @@
-# Linkylinkk
+<img src="Linkylinkk_github.png">
+
 Link sharing app for my project assignment. I enjoyed making it so much that I had to put it here. I used Firebase to store information and log in users. Looking forward to enhance the functionality of this app.
 
 ## How to use?
