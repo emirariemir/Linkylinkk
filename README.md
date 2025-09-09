@@ -1,9 +1,27 @@
-<img src="Linkylinkk_github.png">
+<img src="Linkylinkk_github.png" alt="Linkylinkk Logo">
 
-Link sharing app for my project assignment. I enjoyed making it so much that I had to put it here. I used Firebase to store information and log in users. Looking forward to enhance the functionality of this app.
+# Linkylinkk
 
-## How to use?
-You just simply sign up and start posting your favorite links with the link.
+Linkylinkk is an Android application for sharing your favorite links, built as a project assignment for my Android Application Development class. I enjoyed making it so much that I decided to share it here!
 
-## Contribution
-Contribution is welcome, feel free to send me your pull requests.
+This app uses Firebase for user authentication and data storage. Future enhancements are planned to further expand its functionality.
+
+## How to Use
+
+1. Sign up with your email.
+2. Start posting your favorite links.
+3. View and manage the links you’ve shared.
+
+## Technologies Used
+
+- Android (Java)
+- Firebase Authentication
+- Firebase Firestore
+
+## Contributing
+
+Contributions are welcome! If you have ideas for improvements or new features, feel free to fork the repository and submit a pull request.
+
+---
+
+**Note:** This project was developed for academic purposes as part of an Android application development course assignment.
